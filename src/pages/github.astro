@@ -1,0 +1,55 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      href={`${import.meta.env.BASE_URL}cat.png`}
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="littlecommandcat GitHub"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>GitHub — littlecommandcat</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img
+          src={`${import.meta.env.BASE_URL}cat.png`}
+          alt="littlecommandcat"
+          width="88"
+          height="88"
+        />
+        <p class="eyebrow">LITTLECOMMANDCAT</p>
+        <h1>開源專案<span aria-hidden="true">.</span></h1>
+        <p class="intro">這裡收錄了我的 GitHub 專案</p>
+        <a
+          href="https://github.com/littlecommandcat"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub ↗<span class="sr-only">（在新分頁開啟）</span></a
+        >
+      </header>
+      <section aria-labelledby="projects-heading">
+        <h2 id="projects-heading">GitHub 專案</h2>
+        <p class="section-note">依最近更新排序</p>
+        <p id="repo-status" role="status" aria-live="polite">正在載入專案…</p>
+        <ul id="repo-list" aria-label="GitHub 專案列表" aria-busy="true"></ul>
+        <noscript><p>請啟用 JavaScript 以載入專案</p></noscript>
+      </section>
+      <footer>littlecommandcat</footer>
+    </main>
+    <script>
+      import { initializeRepositories } from "../scripts/repositories";
+      void initializeRepositories();
+    </script>
+  </body>
+</html>

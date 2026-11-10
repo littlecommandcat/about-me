@@ -1,0 +1,26 @@
+{
+  "name": "about-me-site",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "dev": "node node_modules/astro/astro.js dev",
+    "check": "node node_modules/astro/astro.js check",
+    "build": "npm run check && node node_modules/astro/astro.js build",
+    "preview": "node node_modules/astro/astro.js preview",
+    "astro": "node node_modules/astro/astro.js"
+  },
+  "dependencies": {
+    "astro": "^5.18.2"
+  },
+  "overrides": {
+    "unifont": { "undici": "^7.0.0" }
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/node": "^22.0.0",
+    "typescript": "~5.9.3"
+  }
+}
