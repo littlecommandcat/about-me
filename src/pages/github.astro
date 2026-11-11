@@ -21,7 +21,7 @@ import "../styles/global.css";
   </head>
   <body>
     <main>
-      <header>
+      <header id="header-with-line">
         <img
           src={`${import.meta.env.BASE_URL}cat.png`}
           alt="littlecommandcat"
@@ -29,7 +29,7 @@ import "../styles/global.css";
           height="88"
         />
         <p class="eyebrow">LITTLECOMMANDCAT</p>
-        <h1>開源專案<span aria-hidden="true">.</span></h1>
+        <h1>開源專案</h1>
         <p class="intro">這裡收錄了我的 GitHub 專案</p>
         <a
           href="https://github.com/littlecommandcat"
@@ -45,7 +45,7 @@ import "../styles/global.css";
         <ul id="repo-list" aria-label="GitHub 專案列表" aria-busy="true"></ul>
         <noscript><p>請啟用 JavaScript 以載入專案</p></noscript>
       </section>
-      <footer>littlecommandcat</footer>
+      <footer id="footer-with-line">littlecommandcat</footer>
     </main>
     <script>
       import { initializeRepositories } from "../scripts/repositories";

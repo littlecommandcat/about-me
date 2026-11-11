@@ -1,0 +1,43 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      href={`${import.meta.env.BASE_URL}cat.png`}
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="littlecommandcat GitHub"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>About — littlecommandcat</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img
+          src={`${import.meta.env.BASE_URL}cat.png`}
+          alt="littlecommandcat"
+          width="88"
+          height="88"
+        />
+        <p class="eyebrow">LITTLECOMMANDCAT</p>
+        <h1>關於我</h1>
+        <p class="intro">關於我的個人資料</p>
+        <a
+          href="/github"
+          rel="noopener noreferrer"
+          >作品集 ↗<span class="sr-only">（在新分頁開啟）</span></a
+        >
+      </header>
+      <footer>littlecommandcat</footer>
+    </main>
+  </body>
+</html>
