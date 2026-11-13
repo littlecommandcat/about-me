@@ -1,8 +1,12 @@
 ---
 import "../styles/global.css";
 import "../styles/friends.css";
+import "../styles/timeline.css";
 import DiscordPreview from "../components/DiscordPreview.astro";
 import { friendSites } from "../lib/friends";
+import { getSortedTimeline } from "../lib/timeline";
+
+const timeline = getSortedTimeline();
 ---
 
 <!doctype html>
@@ -17,10 +21,10 @@ import { friendSites } from "../lib/friends";
     <meta name="viewport" content="width=device-width" />
     <meta
       name="description"
-      content="littlecommandcat GitHub"
+      content="littlecommandcat About"
     />
     <meta name="generator" content={Astro.generator} />
-    <title>About</title>
+    <title>About — littlecommandcat</title>
     <DiscordPreview
       title="About"
       description="就是一隻貓 關於我的個人資料！"
@@ -38,12 +42,33 @@ import { friendSites } from "../lib/friends";
         <p class="eyebrow">LITTLECOMMANDCAT</p>
         <h1>關於我</h1>
         <p class="intro">關於我的個人資料</p>
+        <a href="#timeline-heading">歷程</a>
+        <br>
+        <a href="#friends-heading">友站</a>
+        <br>
         <a
           href="/github"
           rel="noopener noreferrer"
           >作品集 ↗<span class="sr-only">（在新分頁開啟）</span></a
         >
       </header>
+      <section aria-labelledby="timeline-heading">
+        <h2 id="timeline-heading">歷程</h2>
+        {timeline.length > 0 ? (
+          <ol class="timeline" aria-label="歷程">
+            {timeline.map(entry => (
+              <li>
+                <time datetime={entry.date}>{entry.date.replaceAll('-', ' / ')}</time>
+                <h3>{entry.title}</h3>
+                {entry.description && <p>{entry.description}</p>}
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p class="timeline-empty">暫無歷程</p>
+        )}
+        <p class="timeline-end">持續向前...</p>
+      </section>
       <section aria-labelledby="friends-heading">
         <h2 id="friends-heading">友站</h2>
         {friendSites.length > 0 ? (

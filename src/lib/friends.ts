@@ -19,6 +19,12 @@ export const friendSites: FriendSite[] = [
     description: "嗯 對，你好 我是 CreeperDEV 一個即將面臨會考的國中生 :/\n這個地方應該就是我無聊會講講話的小地方"
   },
   {
+    name: "草薙明音",
+    url: "https://cathome.shop/kusanagi-akane",
+    avatar_url: "https://cathome.shop/favicon.ico",  // 等他修好ico
+    description: "我是草薙明音，常被叫作貓貓。平常主要做網站、Discord 機器人和社群管理"
+  },
+  {
     name: "Taicoolah",
     url: "https://taicoolah.com",
     avatar_url: "https://taicoolah.com/icon.png",

@@ -1,20 +1,24 @@
 .error-icon {
     width: 88px;
     height: 88px;
-    margin: 0 auto 1rem;
+    /* margin: 0 auto 1rem; */
     display: block;
     color: #ff4d4f;
 }
 
 .back-btn {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 10px 20px;
-    border: 1px solid cursrentColor;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+  width: fit-content;
+  
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 .back-btn:hover {
     transform: translateY(-3px);
