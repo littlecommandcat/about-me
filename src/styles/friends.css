@@ -1,0 +1,5 @@
+.friend-sites { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; }
+.friend-sites > li { padding: 1rem; border: 1px solid #ddd; border-radius: 10px; background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 0; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.friend-sites > li:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); }
+.friends-empty { color: #666; font-size: .875rem; }
+.friend-avatar { border: 3px solid black; border-radius: 50%; }

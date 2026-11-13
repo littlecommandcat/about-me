@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
+import "../styles/friends.css";
 import DiscordPreview from "../components/DiscordPreview.astro";
+import { friendSites } from "../lib/friends";
 ---
 
 <!doctype html>
@@ -42,6 +44,33 @@ import DiscordPreview from "../components/DiscordPreview.astro";
           >作品集 ↗<span class="sr-only">（在新分頁開啟）</span></a
         >
       </header>
+      <section aria-labelledby="friends-heading">
+        <h2 id="friends-heading">友站</h2>
+        {friendSites.length > 0 ? (
+          <ul class="friend-sites" aria-label="友站列表">
+            {friendSites.map(site => (
+              <li>
+                <img
+                  class="friend-avatar"
+                  src={site.avatar_url}
+                  alt={site.name}
+                  width="88"
+                  height="88"
+                />
+                <h3>
+                  <a href={site.url} target="_blank" rel="noopener noreferrer">
+                    {site.name} ↗
+                    <span class="sr-only">（在新分頁開啟）</span>
+                  </a>
+                </h3>
+                {site.description && <p>{site.description}</p>}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="friends-empty">暫無友站</p>
+        )}
+      </section>
       <footer id="copyright">© 2026 littlecommandcat</footer>
     </main>
   </body>
