@@ -15,7 +15,10 @@ const payload = JSON.stringify({
       {
         type: 9,
         components: [
-          { type: 10, content: `# [${title}](${url})\n${description}` },
+          {
+            type: 10,
+            content: `## [${title}](${url})\n${description}`
+          },
         ],
         accessory: {
           type: 11,
@@ -26,8 +29,41 @@ const payload = JSON.stringify({
       {
         type: 1,
         components: [
-          { type: 2, style: 5, label: 'Discord', url: 'https://dc.cmdcat.com' },
-          { type: 2, style: 5, label: 'GitHub', url: 'https://github.com/littlecommandcat' },
+          {
+            type: 14,
+            divider: true,
+            spacing: 1
+          },
+          {
+            type: 2, 
+            style: 5,
+            label: 'GitHub',
+            url: 'https://github.com/littlecommandcat',
+            emoji: {
+              id: "1557691048786927646",
+              animated: false
+            }
+          },
+          { 
+            type: 2, 
+            style: 5,
+            label: '喵窩社群',
+            url: 'https://dc.cmdcat.com',
+            emoji: {
+              id: "1434018280129171506",
+              animated: true
+            }
+          },
+          {
+            type: 2, 
+            style: 5,
+            label: '小喵喵',
+            url: 'https://discord.com/oauth2/authorize?client_id=1144161789832069141',
+            emoji: {
+              id: "1474638849501298771",
+              animated: false
+            }
+          },
         ],
       },
     ],

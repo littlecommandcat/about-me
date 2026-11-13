@@ -4,6 +4,11 @@ export interface License {
   name: string;
 }
 
+export interface Contributors {
+  login: string,
+  avatar_url: string,
+}
+
 export interface GitHubRepo {
   name: string;
   html_url: string;
@@ -12,6 +17,8 @@ export interface GitHubRepo {
   url: string;
   stargazers_count: number;
   license: License | null;
+  languages: Map<string, number> | null,
+  contributors: Contributors,
 }
 
 export const username = 'littlecommandcat';

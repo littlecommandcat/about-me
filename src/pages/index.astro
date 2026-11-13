@@ -9,8 +9,8 @@ import DiscordPreview from "../components/DiscordPreview.astro";
     <meta charset="utf-8" />
     <link
       rel="icon"
-      type="image/png"
-      href={`${import.meta.env.BASE_URL}cat.png`}
+      type="image/ico"
+      href={`${import.meta.env.BASE_URL}favicon.ico`}
     />
     <meta name="viewport" content="width=device-width" />
     <meta
@@ -18,17 +18,17 @@ import DiscordPreview from "../components/DiscordPreview.astro";
       content="littlecommandcat GitHub"
     />
     <meta name="generator" content={Astro.generator} />
-    <title>About — littlecommandcat</title>
+    <title>About</title>
     <DiscordPreview
-      title="About — littlecommandcat"
-      description="關於我的個人資料與開源作品集！"
+      title="About"
+      description="就是一隻貓 關於我的個人資料！"
     />
   </head>
   <body>
     <main>
       <header>
         <img
-          src={`${import.meta.env.BASE_URL}cat.png`}
+          src={`${import.meta.env.BASE_URL}img/cat.png`}
           alt="littlecommandcat"
           width="88"
           height="88"
@@ -42,7 +42,7 @@ import DiscordPreview from "../components/DiscordPreview.astro";
           >作品集 ↗<span class="sr-only">（在新分頁開啟）</span></a
         >
       </header>
-      <footer>littlecommandcat</footer>
+      <footer id="copyright">© 2026 littlecommandcat</footer>
     </main>
   </body>
 </html>

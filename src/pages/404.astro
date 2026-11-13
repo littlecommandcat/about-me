@@ -1,0 +1,59 @@
+---
+import "../styles/global.css";
+import "../styles/error.css";
+import DiscordPreview from "../components/DiscordPreview.astro";
+
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href={`${base}favicon.ico`}
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="404 - 找不到頁面" />
+    <meta name="generator" content={Astro.generator} />
+    <title>404 - 找不到頁面</title>
+    <DiscordPreview
+      title="404 - 找不到頁面"
+      description="這裡什麼都沒有，這隻貓迷路了！"
+    />
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <svg
+          class="error-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <line x1="15" y1="9" x2="9" y2="15" />
+          <line x1="9" y1="9" x2="15" y2="15" />
+        </svg>
+
+        <p class="eyebrow">ERROR 404</p>
+        <h1>找不到這個頁面</h1>
+        <p class="intro">你輸入的網址不存在，或是頁面已經被移除了。</p>
+        
+        <a href={base} class="back-btn">← 回到首頁</a>
+      </header>
+      <footer id="copyright">© 2026 littlecommandcat</footer>
+    </main>
+  </body>
+</html>

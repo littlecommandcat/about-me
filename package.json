@@ -13,10 +13,13 @@
     "astro": "node node_modules/astro/astro.js"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "astro": "^5.18.2"
   },
   "overrides": {
-    "unifont": { "undici": "^7.0.0" }
+    "unifont": {
+      "undici": "^7.0.0"
+    }
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",

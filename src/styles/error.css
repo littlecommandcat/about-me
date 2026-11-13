@@ -1,0 +1,22 @@
+.error-icon {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 1rem;
+    display: block;
+    color: #ff4d4f;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    border: 1px solid cursrentColor;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
