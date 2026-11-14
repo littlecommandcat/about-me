@@ -2,9 +2,11 @@
 import "../styles/global.css";
 import "../styles/friends.css";
 import "../styles/timeline.css";
+import "../styles/contact.css";
 import DiscordPreview from "../components/DiscordPreview.astro";
 import { friendSites } from "../lib/friends";
 import { getSortedTimeline } from "../lib/timeline";
+import { commandcat } from "../lib/contact";
 
 const timeline = getSortedTimeline();
 ---
@@ -54,21 +56,23 @@ const timeline = getSortedTimeline();
         >
       </header>
       <section aria-labelledby="timeline-heading">
-        <h2 id="timeline-heading">歷程</h2>
-        {timeline.length > 0 ? (
-          <ol class="timeline" aria-label="歷程">
-            {timeline.map(entry => (
-              <li>
-                <time datetime={entry.date}>{entry.date.replaceAll('-', ' / ')}</time>
-                <h3>{entry.title}</h3>
-                {entry.description && <p>{entry.description}</p>}
-              </li>
-            ))}
-          </ol>
-        ) : (
-          <p class="timeline-empty">暫無歷程</p>
-        )}
-        <p class="timeline-end">持續向前...</p>
+        <details class="timeline-disclosure">
+          <summary><h2 id="timeline-heading">歷程</h2></summary>
+          {timeline.length > 0 ? (
+            <ol class="timeline" aria-label="歷程">
+              {timeline.map(entry => (
+                <li>
+                  <time datetime={entry.date}>{entry.date.replaceAll('-', ' / ')}</time>
+                  <h3>{entry.title}</h3>
+                  {entry.description && <p>{entry.description}</p>}
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p class="timeline-empty">暫無歷程</p>
+          )}
+          <p class="timeline-end">持續向前...</p>
+        </details>
       </section>
       <section aria-labelledby="friends-heading">
         <h2 id="friends-heading">友站</h2>
@@ -76,13 +80,15 @@ const timeline = getSortedTimeline();
           <ul class="friend-sites" aria-label="友站列表">
             {friendSites.map(site => (
               <li>
-                <img
-                  class="friend-avatar"
-                  src={site.avatar_url}
-                  alt={site.name}
-                  width="88"
-                  height="88"
-                />
+                <a href={site.url} target="_blank" rel="noopener noreferrer">
+                  <img
+                    class="friend-avatar"
+                    src={site.avatar_url}
+                    alt={site.name}
+                    width="88"
+                    height="88"
+                  />
+                </a>
                 <h3>
                   <a href={site.url} target="_blank" rel="noopener noreferrer">
                     {site.name} ↗
@@ -96,6 +102,37 @@ const timeline = getSortedTimeline();
         ) : (
           <p class="friends-empty">暫無友站</p>
         )}
+      </section>
+      <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading">聯繫</h2>
+        <div class="contact-grid">
+          <a href={`https://discord.com/users/${commandcat.discord_id}`} target="_blank" rel="noopener noreferrer">
+            <article class="contact-card">
+              <h3>Discord</h3>
+              
+                <img
+                  class="dc-preview"
+                  src={`https://lanyard.cnrad.dev/api/${commandcat.discord_id}?borderRadius=${commandcat.border_radius}px`}
+                  alt="command_cat"
+                  height="250"
+                  style={`border-radius: ${commandcat.border_radius}px;`}
+                />
+            </article>
+          </a>
+          <a href="https://dc.cmdcat.com/" target="_blank" rel="noopener noreferrer">
+          <article class="contact-card">
+            <h3>喵喵的窩</h3>
+            <!-- <p></p> -->
+            <iframe
+              src="https://discord.com/widget?id=1061475265924038758&theme=dark"
+              title="Discord 支援社群"
+              allowtransparency="true"
+              height="250"
+              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+            </iframe>
+          </article>
+          </a>
+        </div>
       </section>
       <footer id="copyright">
         © 2026 littlecommandcat<a href="mailto:support@cmdcat.com" style="margin-left: 16px;">support@cmdcat.com</a>
