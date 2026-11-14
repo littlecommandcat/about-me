@@ -43,13 +43,14 @@ const timeline = getSortedTimeline();
         <h1>關於我</h1>
         <p class="intro">關於我的個人資料</p>
         <a href="#timeline-heading">歷程</a>
-        <br>
         <a href="#friends-heading">友站</a>
+        <a href="/github">作品集</a>
         <br>
         <a
-          href="/github"
+          href="https://bot.cmdcat.com"
           rel="noopener noreferrer"
-          >作品集 ↗<span class="sr-only">（在新分頁開啟）</span></a
+          target="_blank"
+          >喵喵官網 ↗<span class="sr-only">（在新分頁開啟）</span></a
         >
       </header>
       <section aria-labelledby="timeline-heading">
@@ -96,7 +97,9 @@ const timeline = getSortedTimeline();
           <p class="friends-empty">暫無友站</p>
         )}
       </section>
-      <footer id="copyright">© 2026 littlecommandcat</footer>
+      <footer id="copyright">
+        © 2026 littlecommandcat<a href="mailto:support@cmdcat.com" style="margin-left: 16px;">support@cmdcat.com</a>
+      </footer>
     </main>
   </body>
 </html>

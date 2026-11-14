@@ -25,6 +25,12 @@ export const friendSites: FriendSite[] = [
     description: "我是草薙明音，常被叫作貓貓。平常主要做網站、Discord 機器人和社群管理"
   },
   {
+    name: "lnstw",
+    url: "https://willis.lnstw.xyz",
+    avatar_url: "https://willis.lnstw.xyz/images/avatar.png",
+    description: "嗨！我是LNSTW"
+  },
+  {
     name: "Taicoolah",
     url: "https://taicoolah.com",
     avatar_url: "https://taicoolah.com/icon.png",
