@@ -31,6 +31,12 @@ export const friendSites: FriendSite[] = [
     description: "嗨！我是LNSTW"
   },
   {
+    name: "Tofu",
+    url: "https://tofu1201.tw/",
+    avatar_url: "https://tofu1201.tw/favicon.svg",
+    description: "一個喜歡寫程式、研究各種技術的學生開發者"
+  },
+  {
     name: "Taicoolah",
     url: "https://taicoolah.com",
     avatar_url: "https://taicoolah.com/icon.png",

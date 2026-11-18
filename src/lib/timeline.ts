@@ -134,6 +134,11 @@ export const timelineEntries: TimelineEntry[] = [
     date: "2026-11",
     title: "學習Rust",
     description: "決定給自己一些挑戰"
+  },
+  {
+    date: "2026-11",
+    title: "學習Astro",
+    description: "將靜態網頁以Astro框架重寫"
   }
 ];
 
