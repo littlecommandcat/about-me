@@ -101,7 +101,13 @@ const timeline = getSortedTimeline();
                     <span class="sr-only">（在新分頁開啟）</span>
                   </a>
                 </h3>
-                {site.description && <p>{site.description}</p>}
+                {site.description && (
+                  <p>
+                    {site.description.split('\n').map((line, index) => (
+                      <>{index > 0 && <br />}{line}</>
+                    ))}
+                  </p>
+                )}
               </li>
             ))}
           </ul>

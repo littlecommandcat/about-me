@@ -13,7 +13,7 @@ export const friendSites: FriendSite[] = [
     description: "尼摳會來摳你 muhehehehe\n就是一個神奇的高中牲"
   },
   {
-    name: "CreeperDev",
+    name: "CreeperDEV",
     url: "https://creeperdev.me",
     avatar_url: "https://creeperdev.me/assets/img/avatar.png",
     description: "嗯 對，你好 我是 CreeperDEV 一個即將面臨會考的國中生 :/\n這個地方應該就是我無聊會講講話的小地方"
@@ -31,10 +31,22 @@ export const friendSites: FriendSite[] = [
     description: "嗨！我是LNSTW"
   },
   {
+    name: "Kevin",
+    url: "https://kevin.com.tw",
+    avatar_url: "https://kevin.com.tw/upload/kevin.png",
+    description: "專注後端架構與軟硬體整合。取得新型專利、上架 App，並經營自己的雲端主機服務"
+  },
+  {
     name: "Tofu",
     url: "https://tofu1201.tw/",
     avatar_url: "https://tofu1201.tw/favicon.svg",
     description: "一個喜歡寫程式、研究各種技術的學生開發者"
+  },
+  {
+    name: "芒果凍布丁",
+    url: "https://blog.ytmango.uk/",
+    avatar_url: "https://avatars.githubusercontent.com/u/74277414",
+    description: "我是芒果凍布丁 aka 芒果\n熱衷於程式設計，最擅長的語言是 Python"
   },
   {
     name: "Taicoolah",
