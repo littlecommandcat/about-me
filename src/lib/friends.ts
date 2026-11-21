@@ -3,6 +3,8 @@ export interface FriendSite {
   url: string;
   avatar_url: string;
   description?: string;
+  banner_color?: string;
+  banner_url?: string;
 }
 
 export const friendSites: FriendSite[] = [
@@ -10,7 +12,8 @@ export const friendSites: FriendSite[] = [
     name: "Nicko",
     url: "https://avianjay.sbs",
     avatar_url: "https://avianjay.sbs/favicon.ico",
-    description: "尼摳會來摳你 muhehehehe\n就是一個神奇的高中牲"
+    description: "尼摳會來摳你 muhehehehe\n就是一個神奇的高中牲",
+    // banner_color: "blue",
   },
   {
     name: "CreeperDEV",
@@ -34,7 +37,8 @@ export const friendSites: FriendSite[] = [
     name: "Kevin",
     url: "https://kevin.com.tw",
     avatar_url: "https://kevin.com.tw/upload/kevin.png",
-    description: "專注後端架構與軟硬體整合。取得新型專利、上架 App，並經營自己的雲端主機服務"
+    description: "專注後端架構與軟硬體整合。取得新型專利、上架 App，並經營自己的雲端主機服務",
+    banner_url: "https://kevin.com.tw/upload/decor2-c-cloud.png",
   },
   {
     name: "Tofu",

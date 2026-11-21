@@ -1,5 +1,12 @@
+.friends-disclosure > summary { width: fit-content; cursor: pointer; }
+.friends-disclosure > summary::marker { color: #173b70; }
+.friends-disclosure > summary > h2 { display: inline; }
+.friends-disclosure > summary:focus-visible { outline: 2px solid #173b70; outline-offset: 5px; }
 .friend-sites { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; }
 .friend-sites > li { padding: 1rem; border: 1px solid #ddd; border-radius: 10px; background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 0; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.friend-sites > li.friend-card-banner { background-image: linear-gradient(to bottom, var(--friend-banner-color), transparent); background-size: 100% 9rem; background-repeat: no-repeat; }
+.friend-sites > li { position: relative; isolation: isolate; }
+.friend-banner { position: absolute; inset: 0 0 auto; width: 100%; height: 9rem; object-fit: cover; border-radius: 9px 9px 0 0; pointer-events: none; z-index: -1; -webkit-mask-image: linear-gradient(to bottom, #000, transparent); mask-image: linear-gradient(to bottom, #000, transparent); }
 .friend-sites > li:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); }
 .friends-empty { color: #666; font-size: .875rem; }
 .friend-avatar { border: 3px solid black; border-radius: 50%; }

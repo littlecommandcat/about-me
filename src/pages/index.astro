@@ -81,11 +81,18 @@ const timeline = getSortedTimeline();
         </details>
       </section>
       <section aria-labelledby="friends-heading">
-        <h2 id="friends-heading">友站</h2>
+        <details class="friends-disclosure" open>
+          <summary><h2 id="friends-heading">友站</h2></summary>
         {friendSites.length > 0 ? (
           <ul class="friend-sites" aria-label="友站列表">
             {friendSites.map(site => (
-              <li>
+              <li
+                class:list={{ 'friend-card-banner': !!site.banner_color && !site.banner_url }}
+                style={site.banner_color && !site.banner_url ? { '--friend-banner-color': site.banner_color } : undefined}
+              >
+                {site.banner_url && (
+                  <img class="friend-banner" src={site.banner_url} alt="" loading="lazy" />
+                )}
                 <a href={site.url} target="_blank" rel="noopener noreferrer">
                   <img
                     class="friend-avatar"
@@ -114,13 +121,14 @@ const timeline = getSortedTimeline();
         ) : (
           <p class="friends-empty">暫無友站</p>
         )}
+        </details>
       </section>
       <section aria-labelledby="contact-heading">
         <h2 id="contact-heading">聯繫</h2>
         <div class="contact-grid">
           <a href={`https://discord.com/users/${commandcat.discord_id}`} target="_blank" rel="noopener noreferrer">
             <article class="contact-card">
-              <h3>Discord</h3>
+              <h3>Discord ↗</h3>
               
                 <img
                   class="dc-preview"
@@ -131,10 +139,11 @@ const timeline = getSortedTimeline();
                 />
             </article>
           </a>
-          <a href="https://dc.cmdcat.com/" target="_blank" rel="noopener noreferrer">
           <article class="contact-card">
-            <h3>喵喵的窩</h3>
-            <!-- <p></p> -->
+            <a href="https://dc.cmdcat.com/" target="_blank" rel="noopener noreferrer">
+              <h3>喵喵的窩 ↗</h3>
+            </a>
+              <!-- <p></p> -->
             <iframe
               src="https://discord.com/widget?id=1061475265924038758&theme=dark"
               title="Discord 支援社群"
@@ -143,7 +152,6 @@ const timeline = getSortedTimeline();
               sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
             </iframe>
           </article>
-          </a>
         </div>
       </section>
       <footer id="copyright">
