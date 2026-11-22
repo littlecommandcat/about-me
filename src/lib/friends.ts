@@ -28,10 +28,17 @@ export const friendSites: FriendSite[] = [
     description: "我是草薙明音，常被叫作貓貓。平常主要做網站、Discord 機器人和社群管理"
   },
   {
+    name: "二氧化碳",
+    url: "https://weiwei54321.github.io",
+    avatar_url: "https://avatars.githubusercontent.com/u/152625085",
+    description: "名字叫 co2，因為我覺得自己就像空氣裡的二氧化碳。"
+  },
+  {
     name: "lnstw",
     url: "https://willis.lnstw.xyz",
     avatar_url: "https://willis.lnstw.xyz/images/avatar.png",
-    description: "嗨！我是LNSTW"
+    description: "嗨！我是LNSTW",
+    banner_url: "https://willis.lnstw.xyz/images/bg.jpg",
   },
   {
     name: "Kevin",
@@ -43,7 +50,7 @@ export const friendSites: FriendSite[] = [
   {
     name: "Tofu",
     url: "https://tofu1201.tw/",
-    avatar_url: "https://tofu1201.tw/favicon.svg",
+    avatar_url: "https://1.gravatar.com/avatar/4b922be5ec13d4d88712c5d0ac023d9231181f0ec9a10088b993666c32f8e867?size=512",
     description: "一個喜歡寫程式、研究各種技術的學生開發者"
   },
   {
@@ -62,7 +69,7 @@ export const friendSites: FriendSite[] = [
     name: "雲端貓居",
     url: "https://nyanko.host",
     avatar_url: "https://nyanko.host/_astro/icon.Dnpdb9pn_2nszK9.webp",
-    description: "讓你的機器人及網頁應用全天候在線。"
+    description: "讓你的機器人及網頁應用全天候在線。",
   }
   // {
   //   name: "Yuxuan",
